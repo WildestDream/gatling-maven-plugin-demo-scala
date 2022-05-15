@@ -17,7 +17,7 @@ pipeline {
                 message "continue to gating"
             }
             steps {
-                bat 'mvn gatling:test'
+                bat 'mvn gatling:execute'
             }
         }
 
