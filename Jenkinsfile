@@ -17,7 +17,12 @@ pipeline {
                 message "continue to gating"
             }
             steps {
-                bat 'mvn gatling:execute'
+                bat 'mvn gatling:test'
+            }
+            post {
+                always {
+                    gatlingArchive()
+                }
             }
         }
 
