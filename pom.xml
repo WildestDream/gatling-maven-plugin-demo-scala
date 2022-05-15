@@ -18,6 +18,9 @@
   </properties>
 
   <dependencies>
+
+    <!-- gatling 引入 -->
+
     <dependency>
       <groupId>io.gatling.highcharts</groupId>
       <artifactId>gatling-charts-highcharts</artifactId>
@@ -29,6 +32,7 @@
   <build>
     <testSourceDirectory>src/test/scala</testSourceDirectory>
     <plugins>
+      <!--插件1 负责scala的编译、测试 -->
       <plugin>
         <groupId>net.alchim31.maven</groupId>
         <artifactId>scala-maven-plugin</artifactId>
@@ -54,6 +58,8 @@
           </execution>
         </executions>
       </plugin>
+
+      <!--插件2 gatling的 maven插件，是的我们可以使用 mvn gatling:test 等命令 -->
       <plugin>
         <groupId>io.gatling</groupId>
         <artifactId>gatling-maven-plugin</artifactId>

@@ -13,8 +13,9 @@ pipeline {
         }
 
         stage('gatling') {
+            //可选执行
             input {
-                message "continue to gating"
+                message "continue to gating performance test"
             }
             steps {
                 bat 'mvn gatling:test'
